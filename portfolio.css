@@ -14,6 +14,7 @@ body {
     font-family: 'Montserrat', Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -111,6 +112,26 @@ a:hover {
     font-size: 14px;
 }
 
+/* Gallery Section (New) */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 30px;
+    background-color: #fff;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar ul {
@@ -125,4 +146,40 @@ a:hover {
     .hero p {
         font-size: 16px;
     }
+}
+
+/* Dark Theme Overrides */
+.dark-theme {
+    background-color: #111;
+    color: #ddd;
+}
+
+.dark-theme a {
+    color: #ddd;
+}
+
+.dark-theme a:hover {
+    color: #0f33ff;
+}
+
+/* Dark Navbar */
+.dark-theme .navbar {
+    background-color: #222;
+}
+
+/* Dark Hero Section */
+.dark-theme .hero {
+    /* Switch to a dark-mode-specific background image if available */
+    background: url('img/hero-background-dark.jpg') no-repeat center center/cover;
+}
+
+/* Dark Footer */
+.dark-theme .footer {
+    background-color: #222;
+    color: #ddd;
+}
+
+/* Dark Gallery */
+.dark-theme .gallery {
+    background-color: #222;
 }
